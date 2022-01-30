@@ -8,11 +8,22 @@ Library    SeleniumLibrary
 # m conflict remote server I add things
 # merge conflict test on local
 
+*** Variables ***
+${BROWSER}          edge
+${URL}              http://www.yle.fi
+
 *** Keywords ***
 Feature 1 Test
-    Open Browser  http://www.yle.fi  chrome
+    [Arguments]     ${url}  ${browser}
+    Open Browser  http://www.yle.fi  ${browser}
+
+
 
 *** Test Cases ***
-Test
-     Feature 1 Test
+Test yle
+    [Tags]  yle
+    Feature 1 Test  ${URL}   ${BROWSER}
 
+Test google
+    [Tags]  google
+    Feature 1 Test  http://www.google.com   ${BROWSER}
