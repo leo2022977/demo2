@@ -13,17 +13,19 @@ ${BROWSER}          edge
 ${URL}              http://www.yle.fi
 
 *** Keywords ***
-Feature 1 Test
-    [Arguments]     ${url}  ${browser}
-    Open Browser  http://www.yle.fi  ${browser}
+Open Url With Browser
+    [Arguments]     ${aurl}  ${abrowser}
+    Open Browser    ${aurl}  ${abrowser}
 
 
 
 *** Test Cases ***
 Test yle
     [Tags]  yle
-    Feature 1 Test  ${URL}   ${BROWSER}
+    Open Url With Browser  ${URL}   ${BROWSER}
+    Close Browser
 
 Test google
     [Tags]  google
-    Feature 1 Test  http://www.google.com   ${BROWSER}
+    Open Url With Browser  http://www.google.com   ${BROWSER}
+    Close Browser
