@@ -1,3 +1,6 @@
+# Execution examples:
+# EXECUTE TESTS WITH DEFAULT VALUES:    robot -d Results  TestFile.robot
+
 *** Settings ***
 Library    SeleniumLibrary
 # new file
@@ -7,5 +10,9 @@ Library    SeleniumLibrary
 
 *** Keywords ***
 Feature 1 Test
-    Open Browser  http://www.yle.fi  firefox
+    Open Browser  http://www.yle.fi  chrome
+
+*** Test Cases ***
+Test
+     Feature 1 Test
 
