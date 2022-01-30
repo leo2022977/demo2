@@ -1,5 +1,5 @@
 # Execution examples:
-# EXECUTE TESTS WITH DEFAULT VALUES:    robot -d Results  TestFile.robot
+# EXECUTE TESTS WITH DEFAULT VALUES:    robot -d Results  Tests/TestFile.robot
 
 *** Settings ***
 Library    SeleniumLibrary
