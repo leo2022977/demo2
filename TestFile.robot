@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 # new file
 # new change
-# m conflict remote server
+# this is fine
 # merge conflict test on local
 
 *** Keywords ***
